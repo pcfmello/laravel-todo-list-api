@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(array('prefix' => 'api'), function() {
+    Route::resource('tasks', 'TasksController');
+});
